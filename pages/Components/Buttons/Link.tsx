@@ -41,7 +41,7 @@ export const Link: React.FC<TLink> = ({
 
     return (
         <animated.div
-            style={{ transform: props.xy.interpolate(trans) }}
+            style={{ transform: props.xy.interpolate(trans as any) }}
             onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
             className={`
                 text-center
